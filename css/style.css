@@ -42,6 +42,7 @@ Table of Content:
 /*Color Variables*/
 /*=================== fonts ====================*/
 /* Hide logo on small screens */
+
 @media (max-width: 768px) {
   .navbar-brand.logo_h {
       display: none; /* Hides the logo */
