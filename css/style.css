@@ -82,6 +82,12 @@ Table of Content:
   height: 58px;
   object-fit: cover; /* Ensures the images maintain their aspect ratio while fitting the box */
 }
+.navbar-brand.logo_h img {
+  max-width: 100%; /* Ensures the image doesn't overflow */
+  height: auto;    /* Maintains the aspect ratio */
+  display: block;  /* Ensures the image displays as a block element */
+}
+
 /* // above is the new css */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
 .col-md-offset-right-1, .col-lg-offset-right-1 {
