@@ -48,7 +48,29 @@ Table of Content:
 /* .carousel-item img {
   content: url('./image/banner/cottage-no-1.jpg');
 } */
+  /* Styling for the .logo_h class */
+  .navbar-brand.logo_h {
+    color: #000 !important;
+    font-weight: bold !important;
+    text-decoration: none; /* Optional, to remove underlines if any */
+  }
 
+  /* Hover effect for the .logo_h class */
+  .navbar-brand.logo_h:hover {
+    color: #ff9400 !important;
+  }
+ /* Media query for smaller devices */
+ @media only screen and (max-width: 768px) {
+  a.book-now-button {
+    width: 80%; /* Adjust to 80% width for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  a.book-now-button {
+    width: 70%; /* Further adjust width for very small screens */
+  }
+}
 /* Mobile-specific images */
 @media (max-width: 768px) {
   .carousel-item.active img {
