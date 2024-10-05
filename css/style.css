@@ -42,6 +42,32 @@ Table of Content:
 /*Color Variables*/
 /*=================== fonts ====================*/
 /* Hide logo on small screens */
+/* Default desktop images */
+
+/* slider css */
+/* .carousel-item img {
+  content: url('./image/banner/cottage-no-1.jpg');
+} */
+
+/* Mobile-specific images */
+@media (max-width: 768px) {
+  .carousel-item.active img {
+      content: url('../image/Mobile/cootage-no-1.jpg');
+  }
+  .carousel-item:nth-child(2) img {
+      content: url('../image/Mobile/cootage-no-2.jpg');
+  }
+  .carousel-item:nth-child(3) img {
+      content: url('../image/Mobile/cootage-no-3jpg.jpg');
+  }
+  .carousel-item:nth-child(4) img {
+      content: url('../image/Mobile/entire-home.jpg');
+  }
+  .carousel-item:nth-child(5) img {
+      content: url('../image/Mobile/lodgge-no1.jpg');
+  }
+}
+/* slider css */
 
 @media (max-width: 768px) {
   .navbar-brand.logo_h {
