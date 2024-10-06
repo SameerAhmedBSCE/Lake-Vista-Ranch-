@@ -48,13 +48,32 @@ Table of Content:
 /* .carousel-item img {
   content: url('./image/banner/cottage-no-1.jpg');
 } */
+.hover-black:hover {
+  color: black !important;
+}
   /* Styling for the .logo_h class */
+  .navbar .menu_nav .nav-item:hover .nav-link, .navbar .menu_nav .nav-item.active .nav-link {
+    color: inherit !important; /* Keeps the original color */
+}
+
+ .nav-item:hover{
+  color: #ff9400 !important;
+}
   .navbar-brand.logo_h {
     color: #000 !important;
     font-weight: bold !important;
     text-decoration: none; /* Optional, to remove underlines if any */
   }
-
+/* 
+  a:hover{
+    color: #ff9400 !important;
+  } */
+  a.nav-link {
+    color: #000;
+  }
+  .nav-item active{
+    color: #ff9400 !important;
+  }
   /* Hover effect for the .logo_h class */
   .navbar-brand.logo_h:hover {
     color: #ff9400 !important;
@@ -3768,6 +3787,15 @@ h1, h2, h3, h4, h5, h6 {
   color: #f3c300;
 }
 
+._xlzko7 {
+  width: 90vw !important;
+}
+
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 425px) {
+  body.touch ._xlzko7 {
+    width: 320px !important;
+  }
+}

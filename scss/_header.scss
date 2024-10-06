@@ -91,7 +91,7 @@ nav.navbar.navbar-expand-lg.navbar-light {
             }
             &:hover, &.active{
                 .nav-link{
-                    color: #ff9400;
+                    color: #ff9400 !important;
                 }
             }
             &.submenu{
@@ -218,3 +218,16 @@ nav.navbar.navbar-expand-lg.navbar-light {
         background: rgba(34, 34, 34, 0.9)
     }
 }
+
+
+.navbar {
+    .menu_nav {
+      .nav-item {
+        &:hover .nav-link,
+        &.active .nav-link {
+            color: black !important;
+        }
+      }
+    }
+  }
+  
