@@ -1,37 +1,44 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $destination = htmlspecialchars($_POST['destination']);
+    $checkin = htmlspecialchars($_POST['checkin']);
+    $checkout = htmlspecialchars($_POST['checkout']);
+    $rooms = htmlspecialchars($_POST['rooms']);
+    $adults = htmlspecialchars($_POST['adults']);
+    $children = htmlspecialchars($_POST['children']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
 
-    $to = "rockybd1995@gmail.com";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $number = $_REQUEST['number'];
-    $cmessage = $_REQUEST['message'];
+    $to = "sameerahmedbsce@gmail.com";
+    $subject = "New Booking Reservation";
+    $message = "
+        <html>
+        <head>
+            <title>New Booking Reservation</title>
+        </head>
+        <body>
+            <h2>Booking Details</h2>
+            <p><strong>Destination:</strong> $destination</p>
+            <p><strong>Check In:</strong> $checkin</p>
+            <p><strong>Check Out:</strong> $checkout</p>
+            <p><strong>Rooms:</strong> $rooms</p>
+            <p><strong>Adults:</strong> $adults</p>
+            <p><strong>Children:</strong> $children</p>
+            <p><strong>Email:</strong> $email</p>
+            <p><strong>Phone:</strong> $phone</p>
+        </body>
+        </html>
+    ";
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    // Set content-type headers for HTML email
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: <$email>" . "\r\n";
 
-    $subject = "You have a message from your Cake Template.";
-
-    $logo = 'http://wethemez.com/test-html/consultplus/img/logo-black.png';
-    $link = '#';
-
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
-
-    $send = mail($to, $subject, $body, $headers);
-
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Your booking request has been sent successfully.";
+    } else {
+        echo "Failed to send the booking request. Please try again.";
+    }
+}
 ?>
