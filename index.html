@@ -207,6 +207,26 @@
                     <a href="https://www.airbnb.com/rooms/1148620567433501459?source_impression_id=p3_1742237201_P3gegcNGJq6ZFNL_" target="_blank" class="airbnb-link">View On Airbnb</a>
                 </div>
             </div>
+
+             <!-- 4 Bedroom Home -->
+             <div class="listing-card">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="4 Bedroom Home/9.avif" alt="Lodge 1 Image 1"></div>
+                        <div class="swiper-slide"><img src="4 Bedroom Home/2.avif" alt="Lodge 1 Image 2"></div>
+                        <div class="swiper-slide"><img src="4 Bedroom Home/3.avif" alt="Lodge 1 Image 3"></div>
+                        <div class="swiper-slide"><img src="4 Bedroom Home/4.jpg" alt="Lodge 1 Image 3"></div>
+                        <div class="swiper-slide"><img src="4 Bedroom Home/5.avif" alt="Lodge 1 Image 3"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="listing-info">
+                    <h2>Family Friendly ☆ 4 Bedroom Home with Washer+Dryer</h2>
+                    <p>McKinney</p>
+                    <p class="reviews">⭐⭐⭐⭐⭐ 38 reviews</p>
+                    <a href="https://www.airbnb.com/rooms/24888274?source_impression_id=p3_1742316714_P3Cuh1Tl3ifE-e8k_" target="_blank" class="airbnb-link">View On Airbnb</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -243,6 +263,9 @@
         gap: 20px;
         justify-content: center;
         text-align: center;
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     }
 
     .listing-card {
@@ -251,6 +274,8 @@
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         overflow: hidden;
         text-align: center;
+        width: 40%; /* Adjust width as needed */
+    margin: 10px;
     }
 
     .swiper {
@@ -304,11 +329,15 @@
         .accommodation_grid {
             grid-template-columns: repeat(2, 1fr); /* 2 columns */
         }
+        
     }
 
     @media (max-width: 767px) {
         .accommodation_grid {
             grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+        }
+        .listing-card{
+            width: 100%;
         }
     }
 </style>
